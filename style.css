@@ -1,0 +1,650 @@
+body {
+  margin: 0;
+  font-family: DINpro;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+}
+
+header, .niz {
+  height: 650px;
+  width: 100%;
+  background: url(images/Drova.jpg);
+}
+
+.shapkaDrov, .shapkaNiz {
+  height: 600px;
+  width: 100%;
+  background: #322721;
+  opacity: 0.7;
+  position: relative;
+  top: 4%;
+}
+
+.offerShapka {
+  height: 650px;
+  width: 1000px;
+  margin: auto;
+  position: relative;
+  top: -85%
+}
+
+.ViduDrov, .textProkrytka, .textSeredina2, .knopka1, .prokrytka {
+  font-family: Segoe UI;
+  font-weight: lighter;
+  font-size: 1em;
+  text-align: left;
+}
+
+span {
+  color: red;
+}
+
+.lineProkrytka {
+  color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2;
+}
+
+.textProkrytka {
+  text-align: right;
+  padding-right: 1em;
+  order: 1;
+}
+
+.seredinaFon {
+  height: 600px;
+  width: 100%;
+  background: white;
+}
+
+.textSeredina, .textSeredina2 {
+  color: black;
+  font-size: 4ex;
+  margin: 0;
+}
+
+.textSeredina2 {
+  text-align: center;
+  font-size: 1.8em;
+  padding: -2em;
+}
+
+.flex {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.niz {
+  background: url(images/drova1.jpg) center;
+  position: relative;
+}
+
+.shapkaNiz {
+  background: black;
+}
+
+.karta {
+  position: absolute;
+  left: 50%;
+  bottom: 1em;
+}
+
+.nizText1, .nizText2, .nizText3 {
+  position: absolute;
+  bottom: 17em;
+  left: 1em;
+}
+
+.nizText2 {
+  bottom: 13em;
+  left: 3em;
+}
+
+.nizText3 {
+  bottom: 7em;
+  left: 5em;
+}
+
+.knopkaShapka, .knopkaNiz {
+  width: 10em;
+  margin: auto;
+  position: relative;
+  top: -5em;
+  animation-name: example;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes example {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a.knopka1:link, a.knopka1:visited, a.knopka2:link, a.knopka2:visited {
+  position: relative;
+  display: block;
+  margin: 30px auto 0;
+  padding: 5px 15px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: .08em;
+  border-radius: 0;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  z-index: 1;
+}
+
+a.knopka1:link:after, a.knopka1:visited:after, a.knopka2:link:after, a.knopka2:visited:after {
+  content: "";
+  position: absolute;
+  height: 0%;
+  left: 50%;
+  top: 50%;
+  width: 150%;
+  z-index: -1;
+  -webkit-transition: all 0.75s ease 0s;
+  -moz-transition: all 0.75s ease 0s;
+  -o-transition: all 0.75s ease 0s;
+  transition: all 0.75s ease 0s;
+}
+
+a.knopka2:link:hover, a.knopka2:visited:hover {
+  color: #FFF;
+  text-shadow: none;
+}
+
+a.knopka1:link:hover:after, a.knopka1:visited:hover:after, a.knopka2:link:hover:after, a.knopka2:visited:hover:after {
+  height: 450%;
+}
+
+a.knopka1 {
+  border: 2px solid #D24D57;
+}
+
+a.knopka1:after {
+  background: #D24D57;
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+  transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+}
+
+.knopka1:active, .knopka2:active {
+  top: 1px;
+}
+
+a.knopka2 {
+  border: 2px solid #D24D57;
+}
+
+a.knopka2:after {
+  background: #D24D57;
+  opacity: .5;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+a.knopka2:hover:after {
+  height: 140%;
+  opacity: 1;
+}
+
+.remodal-is-locked {
+  overflow: hidden;
+}
+
+.remodal, [data-remodal-id] {
+  display: none;
+}
+
+.remodal-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: -5000px;
+  right: -5000px;
+  bottom: -5000px;
+  left: -5000px;
+  display: none;
+}
+
+.remodal-wrapper {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow: auto;
+  text-align: center;
+  -webkit-overflow-scrolling: touch;
+}
+
+.remodal-wrapper:after {
+  display: inline-block;
+  height: 100%;
+  margin-left: -0.05em;
+  content: "";
+}
+
+.remodal-overlay, .remodal-wrapper {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.remodal {
+  position: relative;
+  outline: none;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.remodal-is-initialized {
+  display: inline-block;
+}
+
+.remodal-bg.remodal-is-opening, .remodal-bg.remodal-is-opened {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+
+.remodal-overlay {
+  background: rgba(43, 46, 56, 0.9);
+}
+
+.remodal-overlay.remodal-is-opening, .remodal-overlay.remodal-is-closing {
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.remodal-overlay.remodal-is-opening {
+  -webkit-animation: remodal-overlay-opening-keyframes 0.3s;
+  animation: remodal-overlay-opening-keyframes 0.3s;
+}
+
+.remodal-overlay.remodal-is-closing {
+  -webkit-animation: remodal-overlay-closing-keyframes 0.3s;
+  animation: remodal-overlay-closing-keyframes 0.3s;
+}
+
+.remodal-wrapper {
+  padding: 10px;
+}
+
+.remodal {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 99.2%;
+  padding: .8%;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  color: black;
+  background: url(images/drovaForm.jpg) center;
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+.remodalBorder {
+  width: 89.2%;
+  border: 1px solid #e1e1e1;
+  padding: 4% 5% 0.8%;
+}
+
+.remodal.remodal-is-opening, .remodal.remodal-is-closing {
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.remodal.remodal-is-opening {
+  -webkit-animation: remodal-opening-keyframes 0.3s;
+  animation: remodal-opening-keyframes 0.3s;
+}
+
+.remodal.remodal-is-closing {
+  -webkit-animation: remodal-closing-keyframes 0.3s;
+  animation: remodal-closing-keyframes 0.3s;
+}
+
+.remodal, .remodal-wrapper:after {
+  vertical-align: middle;
+}
+
+.remodal-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  overflow: visible;
+  width: 35px;
+  height: 35px;
+  margin-left: 28em;
+  padding: 0;
+  cursor: pointer;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  text-decoration: none;
+  color: black;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+.remodal-close:hover, .remodal-close:focus {
+  color: #2b2e38;
+}
+
+.remodal-close:before {
+  font-size: 25px;
+  line-height: 35px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: block;
+  width: 35px;
+  content: "\00d7";
+  text-align: center;
+}
+
+.remodal-confirm, .remodal-cancel {
+  font: inherit;
+  display: inline-block;
+  overflow: visible;
+  min-width: 110px;
+  margin: 0;
+  padding: 12px 0;
+  cursor: pointer;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+}
+
+.remodal-confirm {
+  color: #fff;
+  background: #81c784;
+}
+
+.remodal-confirm:hover, .remodal-confirm:focus {
+  background: #66bb6a;
+}
+
+.remodal-cancel {
+  color: #fff;
+  background: #e57373;
+}
+
+.remodal-cancel:hover, .remodal-cancel:focus {
+  background: #ef5350;
+}
+
+.remodal-confirm::-moz-focus-inner, .remodal-cancel::-moz-focus-inner, .remodal-close::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+@-webkit-keyframes remodal-opening-keyframes {
+  from {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes remodal-opening-keyframes {
+  from {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes remodal-closing-keyframes {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+@keyframes remodal-closing-keyframes {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes remodal-overlay-opening-keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes remodal-overlay-opening-keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes remodal-overlay-closing-keyframes {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes remodal-overlay-closing-keyframes {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.home {
+  width: 500px;
+  margin: 0 auto;
+  background: #f1f1f1;
+  border-radius: 5px;
+  padding: 50px;
+}
+
+.home p {
+  text-align: center;
+}
+
+.mainButton {
+  padding: 10px 25px;
+  background: #e57373;
+  border-radius: 19px;
+  box-shadow: 0 0 5px rgba(206, 57, 57, 0.5);
+  color: #fff;
+  text-decoration: none;
+  font: bold 16px 'Roboto', sans-serif;
+}
+
+.success, .fail {
+  color: #fff;
+  font-size:1.3em;
+}
+
+#modal1Title {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 21, 57, 0.7);
+}
+
+.putName, .putPhone {
+  width: 210px;
+  padding: 0 15px;
+  height: 40px;
+  background: #fff;
+  margin-bottom: 15px;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+}
+
+.btn {
+  width: 242px;
+  height: 42px;
+  background: #e57373;
+  margin-bottom: 15px;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #C94141;
+}
+
+@media only screen and (min-width: 440px) {
+  .remodal {
+    max-width: 420px;
+  }
+}
+
+@media only screen and (max-width: 439px) {
+  .remodal {
+    max-width: 100%;
+  }
+  .putName, .putPhone {
+    width: 90%;
+    height: 80px;
+    font-size: 22px;
+  }
+  .btn {
+    width: 96%;
+    height: 82px;
+    font-size: 22px;
+  }
+  #modal1Title {
+    font-size: 24px;
+  }
+}
+
+.lt-ie9 .remodal-overlay {
+  background: #2b2e38;
+}
+
+.lt-ie9 .remodal {
+  width: 420px;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
